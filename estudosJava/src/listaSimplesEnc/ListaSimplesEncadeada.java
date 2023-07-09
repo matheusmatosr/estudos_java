@@ -52,7 +52,7 @@ public class ListaSimplesEncadeada {
     }
 
     // Excluir no inicio
-    public void ExcluirInicio(int valor) {
+    public void ExcluirInicio() {
         No no = cabeca.getNo().getNo();
         cabeca.setNo(no);
         qtdElementos--;

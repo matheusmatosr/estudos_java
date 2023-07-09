@@ -49,6 +49,7 @@ public class ListaSimplesEncadeada {
         }
         no.setNo(proxNo.getNo());
         proxNo.setNo(no);
+        qtdElementos++;
     }
 
     // Excluir no inicio

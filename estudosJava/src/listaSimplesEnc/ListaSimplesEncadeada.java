@@ -24,7 +24,7 @@ public class ListaSimplesEncadeada {
     public boolean ExisteLista(String elemento) {
         No no = cabeca;
         for (int i = 0; i < qtdElementos; i++) {
-            if (no.getNo().getElemento().equals(no)) {
+            if (no.getNo().getElemento().equals(elemento)) {
                 return true;
             }
             no = no.getNo();

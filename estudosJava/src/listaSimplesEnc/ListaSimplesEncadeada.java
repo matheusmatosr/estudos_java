@@ -35,7 +35,7 @@ public class ListaSimplesEncadeada {
     // Inserir no Inicio
     public void InserirInicio(String i) {
         No no = new No(i);
-        cabeca.setNo(no.getNo());
+        no.setNo(cabeca.getNo());
         cabeca.setNo(no);
         qtdElementos++;
     }

@@ -1,25 +1,25 @@
 package filaPilha;
 
 public class Pilha {
-    private ListaSimplesmenteEncadeada pilha;
 
+    private listaSimplesmenteEncadeada lista;
+
+    // construtor
     public Pilha() {
-        pilha = new ListaSimplesmenteEncadeada();
+        lista = new listaSimplesmenteEncadedada();
     }
 
-    public void Push(String i) {
-        pilha.InserirInicio(i);
+    // inserir
+    public void Push(No atual) {
+        lista.inserePosicao(atual, 0);
     }
 
-    public String Pop() {
-        String palavra = pilha.getPrimeiro();
-
-        palavra.RetirarInicio();
-        return palavra;
-    }
-
-    public String Consulta() {
-        String palavra = pilha.getPrimeiro();
-        return palavra;
+    // remover
+    public void Pop(No atual) {
+        No atual = lista.getNo();
+        if (atual != null) {
+            lista.removerInicio(0);
+        }
+        return atual;
     }
 }

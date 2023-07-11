@@ -1,25 +1,20 @@
 package filaPilha;
 
 public class Fila {
-    private ListaSimplesmenteEncadeada fila;
+
+    private ListaSimplesmenteEncadeada lista;
 
     public Fila() {
-        fila = new ListaSimplesmenteEncadeada();
+        lista = new ListaSimplesmenteEncadeada();
     }
 
-    public void Push(String i) {
-        fila.InserirFinal(i);
+    public void Push(No no) {
+        lista.inserePosicao(no, lista.getTamanho());
     }
 
-    public String pop() {
-        String palavra = fila.getPrimeiro();
-
-        fila.RetirarInicio();
-        return palavra;
-    }
-
-    public String Consulta() {
-        String palavra = fila.getPrimeiro();
-        return palavra;
+    public void Pop(No no) {
+        No noRemovido = lista.getNo();
+        lista.excluirPosicao(0);
+        return noRemovido;
     }
 }

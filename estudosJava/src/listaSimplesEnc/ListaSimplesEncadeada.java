@@ -52,39 +52,6 @@ public class ListaSimplesEncadeada {
         qtdElementos++;
     }
 
-    // questao ultima prova
-    public void InserePos(No novo, int pos) {
-        No auxi = cabeca;
-
-        if (pos > qtdElementos) {
-            while (auxi.getNo() != null) {
-                auxi = auxi.getNo();
-            }
-            auxi.setNo(novo);
-            qtdElementos++;
-        } else {
-            while (pos < qtdElementos) {
-                auxi = auxi.getNo();
-            }
-            novo.setNo(auxi.getNo());
-            auxi.setNo(novo);
-            qtdElementos++;
-        }
-    }
-
-    public void ExcluirPos(No novo, int pos) {
-        No auxi = cabeca;
-
-        if (pos <= qtdElementos) {
-            while (auxi.getNo() != null) {
-                auxi = auxi.getNo();
-            }
-            auxi.setNo(auxi.getNo().getNo());
-        } else {
-            System.out.println("Insira uma posição válida na lista!");
-        }
-    }
-
     // Excluir no inicio
     public void ExcluirInicio() {
         No no = cabeca.getNo().getNo();
